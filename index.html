@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Benazir</title>
+</head>
+<body>
+<div class="container">
+    <div >
+        <h1 class = "header_text">Ваааай, что за котик милый, который в экран смотрит</h1>
+    </div>
+    <div class="gif_container">
+        <img src="https://media1.giphy.com/media/hoBKWdkG9kT5MkChjR/giphy.gif?cid=ecf05e476w5qac6j3836u0ol5vp3abyoh4ennp2jqgtht8cf&ep=v1_gifs_related&rid=giphy.gif&ct=s" alt="Cute animated illustration">
+    </div>
+    <div class = "buttons">
+        <button class="btn" id = "yesButton" onclick="nextPage()">Да</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()">Нет</button>
+        <script>
+            function nextPage() {
+                window.location.href = "yes.html";
+            }
+
+            function moveButton() {
+                var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                document.getElementById('noButton').style.left = `${x}px`;
+                document.getElementById('noButton').style.top = `${y}px`;
+            }
+        </script>
+    </div>
+</div>
+
+</body>
+</html>
